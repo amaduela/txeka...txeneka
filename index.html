@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="app">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="dist/css/style.min.css?v=1.2">
+    <link rel="stylesheet" href="app/dist/css/style.min.css?v=1.2">
     <title>Txeka ... Txeneka</title>
+     <!-- Style sheets -->
+    <!-- <link href="dist/css/bootstrap.css" rel="stylesheet"/> -->
+    
+    <link href="app/dist/css/toastr.css" rel="stylesheet"/>
+
+    <!-- Library Scripts -->
+    <script src="app/dist/js/jquery.min.js"></script>
+    <script src="app/dist/js/angular.js"></script>
+    <script src="app/dist/js/angular-resource.js"></script>
+    <script src="app/dist/js/angular-mocks.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="app/dist/js/bootstrap.min.js"></script>
+    <script src="app/dist/js/ui-utils.js"></script>
+    <script src="app/dist/js/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="app/dist/js/toastr.js"></script>
+
+    <!--application script-->
+    <script src="app/app.js"></script>
+
+    <!--user controllers-->
+    <script src="app/controllers/bor_dashboardCtrl.js"></script>
+    <script src="app/controllers/bor_loansCtrl.js"></script>
+    <script src="app/controllers/bor_regCtrl.js"></script>
+    <script src="app/controllers/homeCtrl.js"></script>
+
+
+    
+
+
+
 </head>
 
 <body>
@@ -23,72 +53,23 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#/">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Borrower</a>
+                            <a class="nav-link" href="#/bor_reg">Borrower</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Investor</a>
+                            <a class="nav-link" href="#/">Investor</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+<div ng-view></div>
 
-    <div class="welcome jumbotron">
-        <div class="container">
-            <div class="note">
-                <h1 class="display-4 text-white">Welcome to TxekaTxeneka!</h1>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-                    Doloribus nemo optio dolores corporis sapiente?<br />
-                    Corrupti neque ratione dolor autem quaerat nulla! Error nulla provident assumenda ullam
-                    perspiciatis porro a.</p>
-                <div class="d-block text-center">
-                    <a class="btn btn-primary btn-md" href="#" role="button">read more</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" src="dist/img/bubble.svg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div><!-- /.col-md-4 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" src="dist/img/bubble.svg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div><!-- /.col-md-4 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" src="dist/img/bubble.svg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div><!-- /.col-md-4 -->
-        </div>
-    </div>
+    
 </body>
 
 </html>
